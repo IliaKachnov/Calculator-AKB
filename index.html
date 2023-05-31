@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <title>Онлайн Калькулятор</title>
+</head>
+<body>
+  <div class="calc__wrapper">
+    <div>
+      <h1 class="calc__title">Подбор внешних АКБ</h1>
+    </div>
+    <div class="calc__inputs-container">
+      <div class="calc__input-item">
+        <label class="calc__label" for="power">Мощность (кВт)</label>
+        <input id="power" class="calc__input power" type="text" value="0">
+      </div>
+      <div class="calc__input-item">
+        <label class="calc__label" for="v">Количество в линейке (шт)</label>
+        <input id="v" class="calc__input" type="text" value="0">
+      </div>
+      <div class="calc__input-item">
+        <label class="calc__label" for="c">Количество линеек (шт)</label>
+        <input id="c" class="calc__input"  type="text" value="0">
+      </div>
+      <div class="calc__input-item">
+        <label class="calc__label" for="kpd">КПД (%)</label>
+        <input id="kpd" class="calc__input"  type="text" value="0">
+      </div>
+      <div class="calc__input-item">
+        <label class="calc__label" for="time">Время работы (мин)</label>
+        <div class="dropdown">
+          <button class="dropdown-toggle" onclick="toggleDropdown()">
+            <span class="dropdown-icon"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li onclick="selectValue(5)">5</li>
+            <li onclick="selectValue(10)">10</li>
+            <li onclick="selectValue(15)">15</li>
+            <li onclick="selectValue(20)">20</li>
+            <li onclick="selectValue(25)">25</li>
+            <li onclick="selectValue(30)">30</li>
+            <li onclick="selectValue(45)">45</li>
+            <li onclick="selectValue(60)">60(1ч)</li>
+            <li onclick="selectValue(90)">90(1,5ч)</li>
+            <li onclick="selectValue(120)">120(2ч)</li>
+            <li onclick="selectValue(180)">180(3ч)</li>
+            <li onclick="selectValue(240)">240(4ч)</li>
+            <li onclick="selectValue(300)">300(5ч)</li>
+            <li onclick="selectValue(360)">360(6ч)</li>
+            <li onclick="selectValue(480)">480(8ч)</li>
+            <li onclick="selectValue(600)">600(10ч)</li>
+            <li onclick="selectValue(1200)">1200(20ч)</li>
+          </ul>
+        </div>
+        
+        <span id="selected-value">0</span> 
+      </div>
+      <div class="calc__input-item">
+        <button id="find" class="calc__btn-search">Подобрать</button>
+      </div>
+    </div>
+    <div class="card__container">
+      <div class="card__items">
+        <div class="card__item">Наименование модели</div>
+        <div class="card__item">Тип</div>
+        <div class="card__item">Номинальное напряжение (В)</div>
+        <div class="card__item">Емкость (Ач)</div>
+        <div class="card__item">Габаритные размеры (ГхШхВ), мм</div>
+        <div class="card__item">Вес (кг)</div>
+        <div class="card__item">Срок службы (лет)</div>
+      </div>
+      <div class="card__container-second">
+        <div class="card__items"></div>
+      </div>
+      <div class="not_found hidden">
+        Необходимые Вам Аккумуляторные батареи не найдены. 
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
