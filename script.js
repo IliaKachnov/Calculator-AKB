@@ -645,13 +645,13 @@
           // Добавляем содержимое внутрь элемента "card__items"
           // В href надо будет указать ссылку на акб
           cardItems.innerHTML = `
-            <div class="card__item"><a href="" target="_blank">${arr[0]}</a></div>
-            <div class="card__item"><a href="" target="_blank">${arr[1]}</a></div>
-            <div class="card__item"><a href="" target="_blank">${arr[2]}</a></div>
-            <div class="card__item"><a href="" target="_blank">${arr[3]}</a></div>
-            <div class="card__item"><a href="" target="_blank">${arr[4]}</a></div>
-            <div class="card__item"><a href="" target="_blank">${arr[5]}</a></div>
-            <div class="card__item"><a href="" target="_blank">${arr[6]}</a></div>
+            <div class="card__style"><a href="" target="_blank">${arr[0]}</a></div>
+            <div class="card__style"><a href="" target="_blank">${arr[1]}</a></div>
+            <div class="card__style"><a href="" target="_blank">${arr[2]}</a></div>
+            <div class="card__style"><a href="" target="_blank">${arr[3]}</a></div>
+            <div class="card__style"><a href="" target="_blank">${arr[4]}</a></div>
+            <div class="card__style"><a href="" target="_blank">${arr[5]}</a></div>
+            <div class="card__style"><a href="" target="_blank">${arr[6]}</a></div>
           `;
           cardContainer.appendChild(cardItems);
         });
